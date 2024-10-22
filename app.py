@@ -75,7 +75,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <h1>Seeed机房电源监控</h1>
+        <h1>***机房电源监控</h1>
         <h2>电压</h2>
         <p>A相电压: {{ voltage_a }} V</p>
         <p>B相电压: {{ voltage_b }} V</p>
