@@ -9,12 +9,9 @@ Nginx 测试输出中显示的警告 "conflicting server name '_' on 0.0.0.0:80,
 sudo nano /etc/nginx/sites-available/flask_app
 确保您的配置如下，并且去掉其他可能冲突的 server block：
 
-nginx
-复制代码
-server {
+`server {
     listen 80;  # 监听 HTTP 端口 80
     server_name _;  # 或者使用具体的 IP 地址或域名
-
     location / {
         proxy_pass http://127.0.0.1:6900;  # 将请求转发到本地 Gunicorn
         proxy_set_header Host $host;
@@ -22,7 +19,8 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
-}
+}`
+
 确保 proxy_pass 指向了 http://127.0.0.1:6900，这样请求可以被转发到 Gunicorn。
 
 删除默认的 Nginx 配置文件，如果它也监听 80 端口（通常是 /etc/nginx/sites-enabled/default）：
