@@ -1,11 +1,12 @@
-传感器型号ADL400N-CT/D10 
-要将您的代码部署到Linux服务器上，并使用Nginx来配合Flask应用以实现网页展示，我们需要进行一些步骤，包括安装和配置Flask与Nginx，并使其协同工作。以下是完整的解决方案：
-
+传感器型号ADL400N-CT/D10  
+485隔离器 https://detail.tmall.com/item.htm?_u=n166ks0128b&id=697469868950&spm=a1z09.2.0.0.cb982e8di1rQzl&skuId=5009997785668
+主控板Beaglebone Y  
+要将您的代码部署到Linux服务器上，并使用Nginx来配合Flask应用以实现网页展示，我们需要进行一些步骤，包括安装和配置Flask与Nginx，并使其协同工作。以下是完整的解决方案：  
 整体思路
-Flask：仍然用Python编写数据采集的Flask应用，用于读取电能表的电压和电流值。
-Nginx：用作反向代理，转发来自客户端的请求到Flask应用，同时提供静态文件支持。
-Gunicorn：作为WSGI服务器，负责运行Flask应用，接收和处理Nginx的请求。
-修改后的代码
+Flask：仍然用Python编写数据采集的Flask应用，用于读取电能表的电压和电流值。  
+Nginx：用作反向代理，转发来自客户端的请求到Flask应用，同时提供静态文件支持。  
+Gunicorn：作为WSGI服务器，负责运行Flask应用，接收和处理Nginx的请求。  
+修改后的代码  
 首先，我们对Flask的部分代码进行稍微修改，以适应在生产环境中通过Gunicorn来运行。
 
 1. 部署Flask应用
