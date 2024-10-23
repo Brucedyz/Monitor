@@ -1,5 +1,5 @@
 传感器型号ADL400N-CT/D10  
-485隔离器 https://detail.tmall.com/item.htm?_u=n166ks0128b&id=697469868950&spm=a1z09.2.0.0.cb982e8di1rQzl&skuId=5009997785668
+485隔离器 https://detail.tmall.com/item.htm?_u=n166ks0128b&id=697469868950&spm=a1z09.2.0.0.cb982e8di1rQzl&skuId=5009997785668  
 主控板Beaglebone Y  
 要将您的代码部署到Linux服务器上，并使用Nginx来配合Flask应用以实现网页展示，我们需要进行一些步骤，包括安装和配置Flask与Nginx，并使其协同工作。以下是完整的解决方案：  
 整体思路
